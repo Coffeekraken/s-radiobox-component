@@ -41,6 +41,15 @@ Then simply use it inside your html like so:
 </label>
 ```
 
+If you need a default styling, import it like so:
+
+```scss
+@import 'node_modules/coffeekraken-s-radiobox/index';
+@include s-radiobox-classes(
+	$colors : default primary secondary
+);
+```
+
 <a id="readme-browsers-support"></a>
 ## Browsers support
 
