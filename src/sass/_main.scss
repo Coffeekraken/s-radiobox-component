@@ -1,0 +1,36 @@
+/**
+ * @name 	s-radiobox
+ * This file provide all the mixins to generate component style
+ */
+
+/**
+ * Print out the bare and style component css
+ * @param 	{List<Color>} 		[$color=default] 		The color to generate
+ */
+@mixin s-radiobox(
+	$color : default
+) {
+	@include s-radiobox-bare();
+	@include s-radiobox-style($color);
+}
+
+/**
+ * Print out the bare component css
+ */
+@mixin s-radiobox-bare() {
+	@include s-component('s-radiobox') {
+
+	}
+}
+
+/**
+ * Print out the style component css
+ * @param 	{Color} 		[$color=default] 		The color to generate
+ */
+@mixin s-radiobox-style(
+	$color : default
+) {
+	@include s-component('s-radiobox') {
+
+	}
+}

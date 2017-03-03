@@ -1,0 +1,128 @@
+/**
+ * @name 	s-radiobox
+ * This file provide all the mixins to generate component classes
+ */
+
+/**
+ * Print out the bare and style component css
+ * @param 	{List<Color>} 		[$color=default primary secondary] 		The colors to generate
+ */
+@mixin s-radiobox-classes(
+	$colors : default primary secondary
+) {
+	@include s-radiobox-classes-bare();
+	@include s-radiobox-classes-style($colors);
+}
+
+/**
+ * Print out the bare component css
+ */
+@mixin s-radiobox-classes-bare() {
+	@include s-component('s-radiobox') {
+		%#{s-component()}-checkbox-bare,
+		input[is="#{s-component()}"][type="checkbox"] {
+			& + .#{s-component())} {
+				display: inline-block;
+				position: relative;
+				cursor: pointer;
+				vertical-align: bottom;
+				width:1em; height:1em;
+
+				&:before {
+					content:'';
+					display: block;
+					position:absolute;
+					top:50%; left:50%;
+					@include s-translate(-50%,-50%);
+					height:1em; width:1em;
+					pointer-events:none;
+				}
+				&:after {
+					content:'';
+					display: block;
+					position: absolute;
+					top:50%; left:50%;
+					width: 0; height: 0;
+					@include s-translate(-50%, -50%);
+					z-index:1;
+				}
+			}
+			label:hover > & + .#{s-component()},
+			& + .#{s-component()}:hover,
+			&:checked + .#{s-component()} {
+				&:after {
+					width:.4em; height:.4em;
+				}
+			}
+		}
+		input[is="#{s-component()}"][type="radio"] {
+			@extend %#{s-component()}-checkbox-bare;
+			border-radius: 50% !important;
+
+			& + .#{s-component()} {
+				&,
+				&:after,
+				&:before {
+					border-radius:50% !important;
+				}
+			}
+		}
+
+		.#{s-component()} + span {
+			margin-left: .5em;
+		}
+	}
+}
+
+/**
+ * Print out the style component css
+ * @param 	{List<Color>} 		[$color=default primary secondary] 		The colors to generate
+ */
+@mixin s-radiobox-classes-style(
+	$colors : default primary secondary
+) {
+	@include s-component('s-radiobox') {
+
+		input[is="#{s-component()}"] {
+			& + .#{s-component()} {
+				&,
+				&:before,
+				&:after {
+					@include s-transition(0.1s);
+				}
+			}
+		}
+
+		@each $color in $colors {
+			input[color="#{$color}"] {
+				& + .#{s-component()} {
+					&:before {
+						background-color: white;
+						border:1px solid s-color($color, -opacity .1);
+					}
+				}
+
+				& + .#{s-component()}:after {
+					background-color: white;
+				}
+
+				label:hover > & + .#{s-component()},
+				& + .#{s-component()}:hover {
+					&:after {
+						background-color: s-color($color, -opacity .15);
+					}
+					&:before {
+						border-color: s-color($color, -opacity .2);
+					}
+				}
+				&:checked {
+					& + .#{s-component()} {
+						&:after {
+							background-color: s-color($color) !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
