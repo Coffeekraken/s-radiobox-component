@@ -18,10 +18,6 @@ var _style = require('coffeekraken-sugar/js/dom/style');
 
 var _style2 = _interopRequireDefault(_style);
 
-var _sTemplateIntegrator = require('coffeekraken-sugar/js/core/sTemplateIntegrator');
-
-var _sTemplateIntegrator2 = _interopRequireDefault(_sTemplateIntegrator);
-
 var _uniqid = require('coffeekraken-sugar/js/utils/uniqid');
 
 var _uniqid2 = _interopRequireDefault(_uniqid);
@@ -118,13 +114,4 @@ var SRadioboxComponent = function (_SInputWebComponent) {
 	return SRadioboxComponent;
 }(_SInputWebComponent3.default);
 
-// STemplate integration
-
-
 exports.default = SRadioboxComponent;
-_sTemplateIntegrator2.default.registerComponentIntegration(SRadioboxComponent, function (component) {
-	_sTemplateIntegrator2.default.ignore(component, {
-		style: true,
-		color: true
-	});
-});

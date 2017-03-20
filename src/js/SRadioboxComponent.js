@@ -1,7 +1,6 @@
 import SInputWebComponent from 'coffeekraken-sugar/js/core/SInputWebComponent'
 import __getAnimationProperties from 'coffeekraken-sugar/js/dom/getAnimationProperties'
 import __style from 'coffeekraken-sugar/js/dom/style'
-import sTemplateIntegrator from 'coffeekraken-sugar/js/core/sTemplateIntegrator'
 import __uniqid from 'coffeekraken-sugar/js/utils/uniqid'
 
 export default class SRadioboxComponent extends SInputWebComponent {
@@ -64,11 +63,3 @@ export default class SRadioboxComponent extends SInputWebComponent {
 		super.render();
 	}
 }
-
-// STemplate integration
-sTemplateIntegrator.registerComponentIntegration(SRadioboxComponent, (component) => {
-	sTemplateIntegrator.ignore(component, {
-		style : true,
-		color : true
-	});
-});
