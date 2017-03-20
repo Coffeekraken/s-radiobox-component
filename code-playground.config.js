@@ -3,7 +3,7 @@ module.exports = {
 	port : 3000,
 
 	// title
-	title : 's-radiobox',
+	title : 's-radiobox-component',
 
 	// layout
 	layout : 'right',
@@ -23,7 +23,7 @@ module.exports = {
 			data : `
 				<div class="container">
 					<h1 class="h1 m-b-small">
-						Coffeekraken s-radiobox
+						Coffeekraken s-radiobox-component
 					</h1>
 					<p class="p p--lead m-b-bigger">
 						Provide a nice and easy to customize radio and checkbox webcomponent extension
