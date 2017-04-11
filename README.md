@@ -1,4 +1,31 @@
-# Coffeekraken s-radiobox <small>0.0.1</small> [![Build Status](https://travis-ci.org/Coffeekraken/s-radiobox-component.svg?branch=release/0.0.1)](https://travis-ci.org/Coffeekraken/s-radiobox-component)
+# Coffeekraken s-radiobox-component <img src=".resources/coffeekraken-logo.jpg" height="25px" />
+
+<p>
+	<a href="https://travis-ci.org/Coffeekraken/s-radiobox-component">
+		<img src="https://img.shields.io/travis/Coffeekraken/s-radiobox-component.svg?style=flat-square" />
+	</a>
+	<a href="https://www.npmjs.com/package/coffeekraken-s-radiobox-component">
+		<img src="https://img.shields.io/npm/v/coffeekraken-s-datepicker.svg?style=flat-square" />
+	</a>
+	<a href="https://github.com/coffeekraken/s-radiobox-component/blob/master/LICENSE.txt">
+		<img src="https://img.shields.io/npm/l/coffeekraken-s-datepicker.svg?style=flat-square" />
+	</a>
+	<!-- <a href="https://github.com/coffeekraken/s-radiobox-component">
+		<img src="https://img.shields.io/npm/dt/coffeekraken-s-datepicker.svg?style=flat-square" />
+	</a>
+	<a href="https://github.com/coffeekraken/s-radiobox-component">
+		<img src="https://img.shields.io/github/forks/coffeekraken/s-radiobox-component.svg?style=social&label=Fork&style=flat-square" />
+	</a>
+	<a href="https://github.com/coffeekraken/s-radiobox-component">
+		<img src="https://img.shields.io/github/stars/coffeekraken/s-radiobox-component.svg?style=social&label=Star&style=flat-square" />
+	</a> -->
+	<a href="https://twitter.com/coffeekrakenio">
+		<img src="https://img.shields.io/twitter/url/http/coffeekrakenio.svg?style=social&style=flat-square" />
+	</a>
+	<a href="http://coffeekraken.io">
+		<img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=flat-square&label=coffeekraken.io&colorB=f2bc2b&style=flat-square" />
+	</a>
+</p>
 
 Provide a nice and easy to customize radio and checkbox webcomponent extension
 
@@ -8,7 +35,7 @@ Provide a nice and easy to customize radio and checkbox webcomponent extension
 2. [Install](#readme-install)
 3. [Get Started](#readme-get-started)
 4. [Javascript API](doc/api/js)
-5. [SASS API](doc/api/scss)
+5. [SASS API](doc/api/sass)
 6. [Sugar Web Components Documentation](https://github.com/Coffeekraken/sugar/blob/master/doc/webcomponent.md)
 7. [Browsers support](#readme-browsers-support)
 8. [Contribute](#readme-contribute)
@@ -54,11 +81,11 @@ If you need a default styling, import it like so:
 <a id="readme-browsers-support"></a>
 ## Browsers support
 
-* Chrome *(latest 2)*
-* Firefox *(latest 2)*
-* Internet Explorer 10+
-* Opera *(latest 2)*
-* Safari *(latest 2)*
+| [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/edge.png" alt="IE / Edge" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/firefox.png" alt="Firefox" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/chrome.png" alt="Chrome" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/safari.png" alt="Safari" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
+| --------- | --------- | --------- | --------- |
+| IE11+ | last 2 versions| last 2 versions| last 2 versions
+
+> As browsers are automatically updated, we will keep as reference the last two versions of each but this component can work on older ones as well.
 
 > The webcomponent API (custom elements, shadowDOM, etc...) is not supported in some older browsers like IE10, etc... In order to make them work, you will need to integrate the [corresponding polyfill](https://www.webcomponents.org/polyfills).
 

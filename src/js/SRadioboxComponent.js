@@ -3,11 +3,27 @@ import __getAnimationProperties from 'coffeekraken-sugar/js/dom/getAnimationProp
 import __style from 'coffeekraken-sugar/js/dom/style'
 import __uniqid from 'coffeekraken-sugar/js/utils/uniqid'
 
+/**
+ * @name 		SRadioboxComponent
+ * @extends 	SInputWebComponent
+ * Provide a nice and easy to customize radio and checkbox webcomponent extension
+ * @styleguide 		Form / Radiobox
+ * @example 		html
+ * <label>
+ * 	<input type="checkbox" is="radiobox" /> Hello
+ * </label>
+ * <label>
+ * 	<input type="radio" is="radiobox" /> World
+ * </label>
+ * @author 		Olivier Bossel <olivier.bossel@gmail.com>
+ */
+
 export default class SRadioboxComponent extends SInputWebComponent {
 
 	/**
 	 * Default props
 	 * @definition 		SWebComponent.getDefaultProps
+	 * @protected
 	 */
 	static get defaultProps() {
 		return {
@@ -18,6 +34,7 @@ export default class SRadioboxComponent extends SInputWebComponent {
 	/**
 	 * Physical props
 	 * @definition 		SWebComponent.physicalProps
+	 * @protected
 	 */
 	static get physicalProps() {
 		return ['color'];
@@ -26,6 +43,7 @@ export default class SRadioboxComponent extends SInputWebComponent {
 	/**
 	 * Mount component
 	 * @definition 		SWebComponent.componentMount
+	 * @protected
 	 */
 	componentMount() {
 		super.componentMount();
@@ -53,13 +71,5 @@ export default class SRadioboxComponent extends SInputWebComponent {
 			this.setAttribute('id', input_for);
 		}
 		this.parentNode.insertBefore(styleNode, this.nextSibling);
-	}
-
-	/**
-	 * Render
-	 * @definition 		SWebComponent.render
-	 */
-	render() {
-		super.render();
 	}
 }
