@@ -1,30 +1,16 @@
-# defaultProps
+# SRadioboxComponent
 
-Default props
+Extends **SInputWebComponent**
 
-**Static**
+Provide a nice and easy to customize radio and checkbox webcomponent extension
 
-
-
-
-
-
-
-## Methods
-
-
-### physicalProps
-
-Physical props
-
-**Static**
-
-
-### componentMount
-
-Mount component
-
-
-### render
-
-Render
+### Example
+```html
+	<label>
+	<input type="checkbox" is="radiobox" /> Hello
+</label>
+<label>
+	<input type="radio" is="radiobox" /> World
+</label>
+```
+Author : Olivier Bossel <olivier.bossel@gmail.com>
