@@ -2,6 +2,8 @@
 
 Default props
 
+**Static**
+
 
 
 
@@ -14,6 +16,8 @@ Default props
 ### physicalProps
 
 Physical props
+
+**Static**
 
 
 ### componentMount
