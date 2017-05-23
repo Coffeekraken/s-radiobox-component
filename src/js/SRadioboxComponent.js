@@ -7,7 +7,6 @@ import __uniqid from 'coffeekraken-sugar/js/utils/uniqid'
  * @name 		SRadioboxComponent
  * @extends 	SInputWebComponent
  * Provide a nice and easy to customize radio and checkbox webcomponent extension
- * @styleguide 		Form / Radiobox
  * @example 		html
  * <label>
  * 	<input type="checkbox" is="radiobox" /> Hello
