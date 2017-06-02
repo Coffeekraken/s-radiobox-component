@@ -18,10 +18,6 @@ var _style = require('coffeekraken-sugar/js/dom/style');
 
 var _style2 = _interopRequireDefault(_style);
 
-var _sTemplateIntegrator = require('coffeekraken-sugar/js/core/sTemplateIntegrator');
-
-var _sTemplateIntegrator2 = _interopRequireDefault(_sTemplateIntegrator);
-
 var _uniqid = require('coffeekraken-sugar/js/utils/uniqid');
 
 var _uniqid2 = _interopRequireDefault(_uniqid);
@@ -33,6 +29,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+/**
+ * @name 		SRadioboxComponent
+ * @extends 	SInputWebComponent
+ * Provide a nice and easy to customize radio and checkbox webcomponent extension
+ * @example 		html
+ * <label>
+ * 	<input type="checkbox" is="radiobox" /> Hello
+ * </label>
+ * <label>
+ * 	<input type="radio" is="radiobox" /> World
+ * </label>
+ * @author 		Olivier Bossel <olivier.bossel@gmail.com>
+ */
 
 var SRadioboxComponent = function (_SInputWebComponent) {
 	_inherits(SRadioboxComponent, _SInputWebComponent);
@@ -50,6 +60,7 @@ var SRadioboxComponent = function (_SInputWebComponent) {
 		/**
    * Mount component
    * @definition 		SWebComponent.componentMount
+   * @protected
    */
 		value: function componentMount() {
 			_get(SRadioboxComponent.prototype.__proto__ || Object.getPrototypeOf(SRadioboxComponent.prototype), 'componentMount', this).call(this);
@@ -78,17 +89,6 @@ var SRadioboxComponent = function (_SInputWebComponent) {
 			}
 			this.parentNode.insertBefore(styleNode, this.nextSibling);
 		}
-
-		/**
-   * Render
-   * @definition 		SWebComponent.render
-   */
-
-	}, {
-		key: 'render',
-		value: function render() {
-			_get(SRadioboxComponent.prototype.__proto__ || Object.getPrototypeOf(SRadioboxComponent.prototype), 'render', this).call(this);
-		}
 	}], [{
 		key: 'defaultProps',
 
@@ -96,6 +96,7 @@ var SRadioboxComponent = function (_SInputWebComponent) {
 		/**
    * Default props
    * @definition 		SWebComponent.getDefaultProps
+   * @protected
    */
 		get: function get() {
 			return {
@@ -106,6 +107,7 @@ var SRadioboxComponent = function (_SInputWebComponent) {
 		/**
    * Physical props
    * @definition 		SWebComponent.physicalProps
+   * @protected
    */
 
 	}, {
@@ -118,13 +120,4 @@ var SRadioboxComponent = function (_SInputWebComponent) {
 	return SRadioboxComponent;
 }(_SInputWebComponent3.default);
 
-// STemplate integration
-
-
 exports.default = SRadioboxComponent;
-_sTemplateIntegrator2.default.registerComponentIntegration(SRadioboxComponent, function (component) {
-	_sTemplateIntegrator2.default.ignore(component, {
-		style: true,
-		color: true
-	});
-});
