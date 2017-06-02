@@ -34,7 +34,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  * @name 		SRadioboxComponent
  * @extends 	SInputWebComponent
  * Provide a nice and easy to customize radio and checkbox webcomponent extension
- * @styleguide 		Form / Radiobox
  * @example 		html
  * <label>
  * 	<input type="checkbox" is="radiobox" /> Hello
