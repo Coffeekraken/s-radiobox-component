@@ -36,7 +36,7 @@ Provide a nice and easy to customize radio and checkbox webcomponent extension
 3. [Get Started](#readme-get-started)
 4. [Javascript API](doc/api/js)
 5. [SASS API](doc/api/sass)
-6. [Sugar Web Components Documentation](https://github.com/Coffeekraken/sugar/blob/master/doc/webcomponent.md)
+6. [Sugar Web Components Documentation](https://github.com/Coffeekraken/sugar/blob/master/doc/js/webcomponents.md)
 7. [Browsers support](#readme-browsers-support)
 8. [Contribute](#readme-contribute)
 9. [Who are Coffeekraken?](#readme-who-are-coffeekraken)
@@ -46,7 +46,7 @@ Provide a nice and easy to customize radio and checkbox webcomponent extension
 ## Install
 
 ```
-npm install https://github.com/Coffeekraken/s-radiobox-component.git/release/0.0.1 --save
+npm install coffeekraken-s-radiobox-component --save
 ```
 
 <a name="readme-get-started"></a>
