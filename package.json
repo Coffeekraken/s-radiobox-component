@@ -1,6 +1,6 @@
 {
   "name": "coffeekraken-s-radiobox-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provide a nice and easy to customize radio and checkbox webcomponent extension",
   "main": "dist/index.js",
   "homepage": "http://coffeekraken.io",
